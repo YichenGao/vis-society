@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 2</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 2</small>
+			Exploratory Data Analysis
+		</h1>
+
+		<p>
+			<strong>Yichen Gao</strong> &mdash; <em>ygao7@mit.edu</em>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Subtheme: Speculation</h2>
+
+			<h3>Overall Analysis Questions</h3>
+			<ol>
+				<li>How has the presence of institutional investors and LLCs in Boston&rsquo;s housing market evolved over time, and what impact has this had on affordability?</li>
+				<li>What role does property flipping play in speculative investment, and how do flipped properties compare in price trends to non-flipped properties?</li>
+				<li>Are there racial or income disparities in areas with high investor activity, and has this changed between the 2010 and 2020 census periods?</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Discoveries & Insights</h2>
+
+			
+			<p>The Boston metropolitan housing market has undergone significant transformation in the past two decades, shaped by economic trends, policy decisions, and the increasing role of speculative investment.</p>
+
+			<p>This analysis focuses on how speculation&mdash;particularly by institutional investors and private equity firms&mdash;has influenced residential sales, affordability, and neighborhood demographics.</p>
+
+			<p>Using residential sales data from 2000&mdash;2023 in both the City of Boston and the broader Metro Boston area, along with census demographic data from 2000&mdash;2020, this study aims to uncover patterns of investor activity, property flipping, and pricing volatility.</p>
+
+			<p>To guide this analysis, three key questions were formulated:</p>
+			
+			<p><strong>How has the presence of institutional investors and LLCs in Boston&rsquo;s housing market evolved over time, and what impact has this had on affordability?</strong></p>
+			
+			<p>Motivation: The ProPublica report on private equity landlords highlights how institutional investors acquire large property portfolios, increase rents, and reduce maintenance costs to maximize profits. Given the affordability crisis in Boston, examining the extent of this phenomenon in the city is crucial.</p>
+
+			<p><strong>What role does property flipping play in speculative investment, and how do flipped properties compare in price trends to non-flipped properties?</strong></p>
+			
+			<p>Motivation: Investor flipping has been identified as a key driver of rising home prices, often leading to displacement of long-term residents. Studies on private equity real estate practices suggest that flipping is a core strategy for short-term profit extraction.</p>
+			
+			<p><strong>Are there racial or income disparities in areas with high investor activity, and has this changed between the 2010 and 2020 census periods?</strong></p>
+			
+			<p>Motivation: Historical patterns of housing segregation and redlining in Boston have disproportionately affected Black and Latino communities. If speculative investment is concentrated in certain census tracts, it may be exacerbating existing racial and economic inequalities.</p>
+
+			<figure>
+				<img src="img/im1.png" alt="" style="width: 90%;"/>
+				<figcaption>
+				Value change of property in Metro Boston 2000-2023.
+				</figcaption>
+			</figure>
+
+			<p>A close examination of transaction price fluctuations between 2000 and 2022 reveals patterns indicative of speculative investment cycles. High transaction prices from 2005-2007, followed by a significant gap between price and avg annual value in 2013-2016 and 2017 onward, suggest waves of investor activity responding to external market conditions. Expanding the time axis to a monthly scale identified an extreme outlier in April 2017 ($3.74 billion), reinforcing the idea that speculation drives volatile pricing. Once the anomaly was removed, price spikes in 2005, 2010, and 2019 became more apparent, correlating with broader economic events, including financial crises and real estate booms.</p>
+
+			<p>Private equity firms and institutional investors often behave like large-scale house flippers, seeking undervalued properties, extracting short-term profit, and offloading them at peak market conditions. As ProPublica&rsquo;s investigation into private equity real estate ownership reveals, these firms follow a predictable pattern: acquiring large property portfolios, aggressively raising rents or reducing maintenance costs, and selling off buildings once profits peak. This cycle artificially inflates property values and places upward pressure on housing costs.</p>
+			
+			<figure>
+				<img src="img/diff.png" alt="" style="width: 90%;"/>
+				<figcaption>
+				Price difference between investor types.
+				</figcaption>
+			</figure>
+
+			<p>The analysis of price differences between investor types reveals distinct speculative trends in Boston&rsquo;s real estate market. Institutional and medium-scale investors exhibit similar patterns where absolute price differences and percentage increases remain closely aligned, though institutional investors see significantly higher absolute gains, reflecting large-scale speculative flipping.</p>
+
+			<p>Large investors, in contrast, show higher percentage price increases relative to absolute price gains, suggesting a focus on acquiring lower-cost properties and reselling them at sharply inflated prices, a strategy often associated with aggressive market repositioning and displacement risks.</p>
+
+			<p>Meanwhile, small investors and non-investor transactions display higher absolute price differences than percentage changes but at lower overall levels, indicating more stable, organic value appreciation rather than speculative flipping.</p>
+
+			<p>These disparities highlight how institutional and large investors drive market volatility by rapidly cycling properties for profit, exacerbating affordability challenges for first-time buyers and lower-income residents. The prevalence of investor-driven speculation reinforces concerns over housing accessibility, pointing to a need for policy interventions such as stricter flipping regulations, rent control measures, and zoning reforms to curb the disproportionate impact of speculative investment on Boston&rsquo;s housing market.</p>
+
+
+
+			<figure>
+				<img src="img/type1.png" alt="" style="width: 90%;"/>
+				<img src="img/type2.png" alt="" style="width: 90%;"/>
+				<figcaption>
+				Investor-type sales data.
+				</figcaption>
+			</figure>
+			<p>The relationship between investor type sales and purchases reveals distinct transactional patterns in Boston&rsquo;s real estate market, with strong correlations between buyer and seller types. The densest areas along the diagonal line in the visualization suggest that investor transactions typically occur within the same investor category, meaning institutional investors tend to sell to other institutional entities, large investors trade among themselves, and small investors primarily engage with other small buyers. This pattern aligns with broader real estate market dynamics, where investment firms and corporate landlords prefer to transfer properties within their network, ensuring profitability through economies of scale and portfolio consolidation. However, an interesting exception is the tendency for larger investors to sell to smaller entities rather than the reverse, highlighting a cascading effect where institutional and large investors capitalize on market peaks before offloading properties to medium or small investors, who may hold them for longer periods before reselling.</p>
+
+			<p>When analyzing the intersection of sale type and investor type in relation to avg annual value and price, two dominant transactional groups emerge: institutional-to-institutional sales and non-investor-to-non-investor sales. This reinforces the notion that large-scale investors operate in a separate financial ecosystem from individual homeowners, potentially limiting opportunities for non-investors to enter high-value markets. Other transactional patterns&mdash;such as large-to-large, medium-to-medium, and small-to-small sales&mdash;suggest that investor categories operate in relatively isolated clusters, further stabilizing speculative pricing structures. A noteworthy exception is small-to-non-investor sales, which, while less frequent, indicate a point of entry for non-investors acquiring homes from smaller investors rather than large institutions.</p>
+
+			<p>The color-coded visualization of these trends enhances interpretability, allowing for a clear comparison of transaction volumes and price trends across different investor categories. These patterns align with expectations, as institutional investors dominate high-value transactions, while smaller-scale transactions occur within a more constrained financial range. This structured segmentation of investor activity underscores how speculation and corporate consolidation impact housing accessibility, making it crucial to examine policy interventions that could incentivize non-investor participation and reduce institutional dominance in Boston&rsquo;s housing market.</p>
+
+			<figure>
+				<img src="img/freq.png" alt="" style="width: 90%;" />
+				<figcaption>
+				Frequency of buy-side flips.
+				</figcaption>
+			</figure>
+
+			<p>The distribution of investor type sales over time reveals critical insights into the frequency and nature of transactions in Boston&rsquo;s real estate market. The most common categories&mdash;&ldquo;building investor, non-count-investor, non-small LLC&rdquo; and variations of &ldquo;non-building investor&rdquo;&mdash;indicate that non-small LLCs play a dominant role in property purchases. This suggests that mid-to-large-scale investors, rather than individual buyers or small-scale investors, are driving a significant portion of transactions. What factors contribute to the prevalence of non-small LLC purchases? Are these entities benefiting from financial advantages such as bulk purchasing, tax incentives, or access to lower interest rates? Understanding the financial mechanisms behind these transactions could help policymakers regulate speculative investment.</p>
+
+			<p>Additionally, the frequency of non-building investor transactions, particularly those involving LLCs, points to a trend of investors acquiring properties primarily for financial leverage rather than long-term ownership or development. Do these investors focus on land banking, speculative flipping, or rental income strategies? The high presence of small LLC purchases within this category suggests that smaller investment firms or individual investors are also active, though they remain secondary players compared to larger LLCs. How does the long-term ownership behavior of small LLCs compare to non-small LLCs? Do small LLCs hold properties longer, or do they engage in frequent turnover similar to institutional investors? Examining resale timelines could shed light on whether these investors are stabilizing forces or contributors to price volatility.</p>
+
+			<p>By plotting investor type sales along the time axis, trends in investor activity over the years become evident. Has the share of institutional and non-small LLC transactions increased over time? If so, how has this affected housing affordability and availability for non-investor buyers? If large investors are consolidating ownership, it could signal a shift toward corporate control over Boston&rsquo;s housing stock, mirroring national trends where private equity firms dominate urban real estate markets. Tracking these patterns over time can help assess whether speculative investment is intensifying and what interventions might be necessary to prevent excessive investor-driven pricing.</p>
+
+			<figure>
+			<img src="img/pie_2.png" alt="" style="width: 90%;" />
+			<figcaption>
+			Gender and age distribution in in Metro Boston 2010.
+			</figcaption>
+		</figure>
+		
+		<figure>
+				<img src="img/pie_1.png" alt="" style="width: 90%;" />
+				<figcaption>
+				Race and household type distribution in in Metro Boston 2010.
+				</figcaption>
+			</figure>
+		</section>
+		<p>The demographic data reveals key insights into the population composition, which has significant implications for policy and social services. The gender distribution is slightly skewed toward females, with 52.5% female and 47.5% male, which could influence economic behavior, such as labor force participation and family structure. Female-headed households are more common in single-parent families, which could indicate a need for affordable housing options, childcare support, and policies addressing the financial needs of single mothers or women living alone. Additionally, the large proportion of the population aged 18-64 (60.3%) suggests that the working-age population plays a central role in the economy, necessitating policies focused on job creation, workforce development, and housing solutions for young professionals, families, and retirees. With 16.1% of the population over 65, there&rsquo;s also an increased demand for elderly services, including senior housing and healthcare.</p>
+
+		<p>The racial composition shows that 86.1% of the population is white, 6.1% is Asian, and 7.8% is from other racial groups. This demographic structure points to a predominantly white population but also highlights the growing presence of the Asian community, which may require culturally relevant services and policies, such as education, healthcare, and business opportunities. The 7.8% from other races underscores the diversity within the population, emphasizing the need for inclusive policies that address the needs of different ethnic groups, especially in urban areas where these communities may be more concentrated. These demographic shifts may also lead to changes in the types of housing demanded, including culturally inclusive designs and community-focused developments.</p>
+		
+		<p>Finally, with 69.4% of households being family households and 30.6% non-family households, housing demands are shaped by these living arrangements. Family households typically require larger living spaces and access to community-based services like schools and parks, while non-family households may prefer smaller units or shared living spaces. The high percentage of family households suggests a need for policies supporting childcare, education, and family welfare. Additionally, as the population ages, there will be an increasing demand for age-friendly housing and specialized healthcare facilities. Understanding these trends helps shape housing policies that are equitable and accessible to all segments of the population, ensuring that the needs of families, elderly individuals, and diverse communities are met.</p>
+		<section>
+			<h2>Summary</h2>
+
+			<p>The speculative nature of real estate investment&mdash;particularly in the hands of private equity firms and institutional investors&mdash;has transformed Greater Boston&rsquo;s housing market. Transaction trends indicate that speculation drives pricing volatility, investor behaviors confirm a preference for short&mdash;term profit maximization, and the financialization of housing exacerbates affordability crises. Without intervention, these patterns will continue to displace tenants, inflate housing costs, and consolidate property ownership among a small number of institutional players.</p>
+
+            <p>Policymakers must address these challenges by implementing stronger rent regulations, imposing conditions on government&mdash;backed financing, and restricting exploitative investment practices. As housing advocates argue, speculation-driven real estate investment is not merely a financial strategy&mdash;it is a systemic force reshaping urban landscapes, often at the expense of vulnerable communities.</p>
+		</section>
+	</main>
+</body>
+</html>
